@@ -50,7 +50,7 @@ button.onclick = function () {
       for (key in newObject.Search) {
         let single_div = document.createElement('div');
         single_div.className = 'single_div';
-        single_div.innerHTML = `<div class="back"><h2>${newObject.Search[key].Title}</h2><h2>${newObject.Search[key].Year}</h2></div><img src='${newObject.Search[key].Poster}' alt='poster'></img>`;
+        single_div.innerHTML = `<div class="back"><h1>${newObject.Search[key].Title}</h1><h2>${newObject.Search[key].Year}</h2></div><img src='${newObject.Search[key].Poster}' alt='poster'></img>`;
         if (single_div.lastElementChild.getAttribute('src') === 'N/A') {
           single_div.lastElementChild.setAttribute('src', './images/no_poster.jfif');
         }
