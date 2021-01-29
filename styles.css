@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 h1 {
   display: block;
   text-align: center;
@@ -20,18 +21,49 @@ h1 {
   font-size: 46px;
 }
 form {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
 }
 #search {
   width: 100%;
+  height: 30px;
   color: black;
+  margin: 10px auto 10px auto;
 }
 #btn {
-  color: black;
+  color: #ffffff;
+  width:100px;
+  height:50px;
+  cursor: pointer;
+  background: transparent;
+  border: 4px solid #800000;
+  font-size: 24px;
+  align-self: center;
+  transition: 1s ease-in;
 }
+#btn::after{
+  position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #006400;
+    -webkit-transition: all .35s; 
+    -o-transition: all .35s;
+    transition: all .35s;
+    z-index: -5;
+}
+#btn:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
 #result_div {
   color: #ffffff;
   margin-left: auto;
@@ -75,12 +107,57 @@ margin: 2px;
   height: inherit;
   width: inherit;
   text-align: center;
+  
+
+}
+.back:hover, .back:focus{
+  opacity:1;
+  background-color: rgba(1, 1, 1, 0.8);
 }
 
-.zzz{
-  opacity: 1;
-  background-color: rgba(1, 1, 1, 0.8);
+.modal_btn{
+  margin-top: 30px;
+  width:200px;
+  height: 50px;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 36px;
+  cursor: pointer;
+  border:3px dotted #ffffff
 
+}
+.modal_btn:hover{
+  background-color: #ffffff;
+  color: #000000;
+  
+}
+#modal_description{
+  display: none;
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.9);
+
+}
+#description_div{
+  display: block;
+  max-width: 700px;
+  min-height: 300px;
+  margin:150px auto 100px auto;
+  background-color: #d3d3d3;
+  outline: 1px solid #ffffff;
+}
+
+.draw_info>h2{
+  text-align: center;
+background-color: black;
+outline: 1px solid #ffffff;
+}
+.draw_info>p{
+font-family: 'Open Sans', sans-serif;
+color: #000000;
+margin: 10px;
 }
 
 @media screen and (max-width:657px){
