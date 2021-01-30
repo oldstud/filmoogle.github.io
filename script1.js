@@ -72,7 +72,7 @@ button.onclick = function () {
               description_div.removeChild(description_div.firstChild);
             }
             const { id } = e.target.closest('div');
-            let description_url = `http://www.omdbapi.com/?i=${id}&plot=full&apikey=9af90fb8`;
+            let description_url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=9af90fb8`;
             fetch(description_url)
               .then(response => {
                 return response.json()
@@ -137,7 +137,7 @@ button.onclick = function () {
                       description_div.removeChild(description_div.firstChild);
                     }
                     const { id } = e.target.closest('div');
-                    let description_url = `http://www.omdbapi.com/?i=${id}&plot=full&apikey=9af90fb8`;
+                    let description_url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=9af90fb8`;
                     fetch(description_url)
                       .then(response => {
                         return response.json()
